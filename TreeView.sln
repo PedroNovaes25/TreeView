@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioTreeView", "DesafioT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{49C71FAE-D513-4F54-BA71-5DCA48AD2A1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioTreeView2", "..\DesafioTreeView2\DesafioTreeView2.csproj", "{8953923C-6A69-489B-BF44-09F7F1789A4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{C765398D-8946-4D81-812E-6361150D89F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C765398D-8946-4D81-812E-6361150D89F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C765398D-8946-4D81-812E-6361150D89F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8953923C-6A69-489B-BF44-09F7F1789A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8953923C-6A69-489B-BF44-09F7F1789A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8953923C-6A69-489B-BF44-09F7F1789A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8953923C-6A69-489B-BF44-09F7F1789A4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
