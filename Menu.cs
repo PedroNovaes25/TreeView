@@ -20,16 +20,19 @@ namespace DesafioTreeView
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //treeView1.Nodes.Clear();
-            //treeView1.Nodes.Add("Item");
-            //var node = treeView1.Nodes[0]; // é a referencia: o ponto de partida para a leitura das pastas e arquivos
-            //loadDiretorios(@"C:\Users\Public\PedroNovaes\CodigosEmC#\Tree\TreeView", ref node);
+            #region #CódigoDoLoadDiretório
+                //treeView1.Nodes.Clear();
+                //treeView1.Nodes.Add("Item");
+                //var node = treeView1.Nodes[0]; // é a referencia: o ponto de partida para a leitura das pastas e arquivos
+                //loadDiretorios(@"C:\Users\Public\PedroNovaes\CodigosEmC#\Tree\TreeView", ref node);
+            #endregion
             rodar();
         }
 
-
-        private void rodar() 
+        #region #CódigoEmFuncinamento
+        private void rodar()
         {
+            #region ColocandiItemsNoTreeView
             //List<Item>  itemsBase = new List<Item>()
             //{
             //    new ItemContainerBase() { Nome = "1", Items = new List<Item>()
@@ -66,7 +69,7 @@ namespace DesafioTreeView
             //        } },
             //    } },
             //};
-
+            #endregion]
 
             List<Item> itemBase = new List<Item>();
             itemBase.Add(new ItemContainerBase() { Nome = "Pasta1" });
@@ -82,14 +85,12 @@ namespace DesafioTreeView
             itemContainerBase3.Items.Add(new Item() { Nome = "pasta4" });
             itemBase.Add(itemContainerBase1);
 
-
-
             treeView1.Nodes.Clear();
             TreeViewItemBaseExtensao.TryAdicionarItems(treeView1, itemBase);
         }
+        #endregion
 
-
-        #region #TentativaAntiga
+        #region #TentativaAntigaQueNãoDeuCerto
         private void Do()
         {
             List<Item> itemBase = new List<Item>();
@@ -163,13 +164,11 @@ namespace DesafioTreeView
         #region #UsandoTreeViewPegandoRepositório
         private void loadDiretorios(string diretorio, ref TreeNode node)
         {
-           
             //string[] arquivos = Directory.GetFiles(diretorio);
             //foreach (string arquivo in arquivos)
             //{
             //    node.Nodes.Add(Path.GetFileName(arquivo));
             //}
-
 
             //string[] subDiretorios = Directory.GetDirectories(diretorio);
             //foreach (string subDiretorio in subDiretorios)
@@ -178,6 +177,28 @@ namespace DesafioTreeView
             //    loadDiretorios(subDiretorio, ref n);
             //    node.Nodes.Add(n);
             //}
+        }
+        #endregion
+
+        #region #TentativaDeCódigoParaTerminar
+        public void loadDiretorios(List<Item> itemBase)
+        {
+            foreach (Item item1 in itemBase)
+            {
+                treeView1.Nodes.Add(new TreeNode(item1.Nome));
+
+                // Add a child treenode for each Order object in the current Customer object.
+                foreach (var filho in (item1 as ItemContainerBase).Items)
+                {
+                    treeView1.Nodes[itemBase.IndexOf(item1)].Nodes.Add(
+                      new TreeNode(filho.Nome));
+                    //foreach (Item item3 in itemContainerBase3.Items)
+                    //{
+                    //    treeView1.Nodes[itemBase.IndexOf(item1)].Nodes.Add(
+                    //    new TreeNode(item1.Nome));
+                    //}
+                }
+            }
         }
         #endregion
     }
