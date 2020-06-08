@@ -47,17 +47,17 @@
   <ItemGroup>
     <Compile Include="Item.cs" />
     <Compile Include="ItemContainerBase.cs" />
-    <Compile Include="Menu.cs">
+    <Compile Include="frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="frm_Menu.Designer.cs">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TreeViewItemBaseExtensao.cs" />
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Menu.resx">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
